@@ -52,7 +52,9 @@ class _AddPageState extends State<AddPage> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              TextFormField(
+              TextFormField(style: TextStyle(color:  context.watch<ThemeProvider>().isDarkMode
+                  ? Colors.white70
+                  : Colors.grey.withOpacity(0.10)),
                 controller: _nameController,
                 decoration: InputDecoration(
                   hintText: 'Name ',
@@ -71,7 +73,9 @@ class _AddPageState extends State<AddPage> {
                 ),
               ),
               const SizedBox(height: 16),
-              TextFormField(
+              TextFormField(style: TextStyle(color:  context.watch<ThemeProvider>().isDarkMode
+                  ? Colors.white70
+                  : Colors.grey.withOpacity(0.10)),
                 controller: _ageController,
                 decoration: InputDecoration(
                   hintText: 'Age ',
